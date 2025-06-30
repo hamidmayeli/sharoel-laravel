@@ -1,0 +1,24 @@
+{
+  "resources/css/app.css": {
+    "file": "assets/app-DTbacBgn.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/css/components/map.css": {
+    "file": "assets/map-BjIYm04z.css",
+    "src": "resources/css/components/map.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-D46gy5XR.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/js/components/map.js": {
+    "file": "assets/map-jVl5WwHB.js",
+    "name": "map",
+    "src": "resources/js/components/map.js",
+    "isEntry": true
+  }
+}

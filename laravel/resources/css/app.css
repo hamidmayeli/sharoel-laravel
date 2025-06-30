@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    :root {
+        --neutral-0: 255 255 255;
+        --neutral-50: 250 250 250;
+        --neutral-100: 243 246 248;
+        --neutral-200: 229 229 229;
+        --neutral-300: 203 213 225;
+        --neutral-400: 163 163 163;
+        --neutral-500: 107 114 128;
+        --neutral-600: 82 82 82;
+        --neutral-700: 64 64 64;
+        --neutral-800: 39 39 42;
+        --neutral-900: 23 23 23;
+        --neutral-950: 10 10 10;
+
+        --red-600: 220 38 38;
+        --red-500: 239 68 68;
+        --red-400: 248 113 113;
+        --red-300: 252 165 165;
+
+        --blue-600: 2 132 199;
+        --blue-500: 59 130 256;
+        --blue-400: 56 189 248;
+        --blue-300: 125 211 252;
+
+        --green-600: 22 163 74;
+        --green-500: 34 197 94;
+        --green-400: 74 222 128;
+        --green-300: 134 239 172;
+
+        --yellow-600: 202 138 4;
+        --yellow-500: 234 179 8;
+        --yellow-400: 250 204 21;
+        --yellow-300: 253 224 71;
+
+        --primary: var(--neutral-800);
+        --primary-darker: var(--neutral-900);
+        --primary-lighter: var(--neutral-700);
+        --on-primary: var(--neutral-0);
+
+        --surface: var(--neutral-0);
+        --surface-container-low: var(--neutral-50);
+        --surface-container: var(--neutral-100);
+        --surface-container-high: var(--neutral-200);
+        --surface-container-highest: var(--neutral-300);
+        --outline: var(--neutral-300);
+
+        --title: var(--neutral-700);
+        --body: var(--neutral-600);
+
+        --muted: var(--neutral-500);
+
+        --active: var(--neutral-500);
+        --active-darker: var(--neutral-600);
+        --active-ligher: var(--neutral-400);
+        --active-container: var(--neutral-400);
+
+        --error: var(--red-500);
+        --error-container: var(--red-300);
+
+        --danger: var(--red-500);
+        --danger-darker: var(--red-600);
+        --danger-lighter: var(--red-400);
+        --danger-container: var(--red-300);
+        --on-danger: var(--neutral-0);
+
+        --warning: var(--yellow-500);
+        --warning-darker: var(--yellow-600);
+        --warning-lighter: var(--yellow-400);
+        --warning-container: var(--yellow-300);
+        --on-warning: var(--neutral-0);
+
+        --success: var(--green-500);
+        --success-darker: var(--green-600);
+        --success-lighter: var(--green-400);
+        --success-container: var(--green-300);
+        --on-success: var(--neutral-0);
+
+    }
+
+    body {
+        color: rgb(var(--body));
+    }
+
+    /*html {*/
+        /*-moz-font-feature-settings: "ss01";*/
+        /*-webkit-font-feature-settings: "ss01";*/
+        /*font-feature-settings: "ss01";*/
+    /*}*/
+
+    :lang(fa) {
+        direction: rtl;
+    }
+
+    :lang(en) {
+        direction: ltr;
+    }
+
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+}

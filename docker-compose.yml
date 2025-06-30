@@ -1,0 +1,42 @@
+services:
+  app:
+    build: .
+    container_name: laravel-app
+    restart: unless-stopped
+    volumes:
+      - ./laravel:/var/www/laravel
+      - ./public_html:/var/www/public
+    environment:
+      - DB_HOST=db
+      - DB_DATABASE=sharoel1_sharoel_studio
+      - DB_USERNAME=sharoel1_admin
+      - DB_PASSWORD=SNi4BuagZ23b
+
+  webserver:
+    image: nginx:alpine
+    container_name: nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./laravel:/var/www/laravel
+      - ./public_html:/var/www/public
+      - ./docker/nginx/conf.d:/etc/nginx/conf.d
+    depends_on:
+      - app
+      - db
+
+  db:
+    image: mysql:8.0
+    container_name: mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: sharoel1_sharoel_studio
+      MYSQL_ROOT_PASSWORD: SNi4BuagZ23b
+      MYSQL_USER: sharoel1_admin
+      MYSQL_PASSWORD: SNi4BuagZ23b
+    volumes:
+      - dbdata:/var/lib/mysql
+
+volumes:
+  dbdata:
