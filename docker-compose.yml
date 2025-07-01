@@ -1,11 +1,12 @@
 services:
   app:
-    build: .
+    image: hamidmayeli/sps:latest
     container_name: laravel-app
     restart: unless-stopped
     volumes:
       - ./laravel:/var/www/laravel
       - ./public_html:/var/www/public
+      - ./backups:/backups
     environment:
       - DB_HOST=db
       - DB_DATABASE=sharoel1_sharoel_studio
